@@ -11,7 +11,11 @@ export default {
       light: "#B8DFF0",
       pink: "#EA98FF",
     },
-    // extend: {},
+    extend: {
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+      },
+    },
   },
   plugins: [],
 };
