@@ -1,8 +1,11 @@
-import { useState } from "react";
+// import { useState } from "react";
 import Logo from "./assets/img/logo.svg";
+import { Link } from "react-scroll";
+// import { slide as Menu } from "react-burger-menu";
+// import Burger from "Burger.jsx";
 
 function NavBar() {
-  const [isNavOpen, setIsNavOpen] = useState(false);
+  // const [isNavOpen, setIsNavOpen] = useState(false);
   // grab everything we need
   // const btn = document.querySelector("button.mobile-menu-button");
   // const menu = document.querySelector(".mobile-menu");
@@ -15,20 +18,57 @@ function NavBar() {
   return (
     <>
       <nav className="bg-gray-100">
+        {/* <div>
+          <svg
+            className="w-6 h-6"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="green">
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+          <Menu className=" bg-grey ">
+            <a id="home" className="menu-item" href="/">
+              Home
+            </a>
+            <a id="about" className="menu-item" href="/about">
+              About
+            </a>
+            <a id="contact" className="menu-item" href="/contact">
+              Contact
+            </a>
+          </Menu> */}
+        {/* </div> */}
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex justify-between">
             <div className="flex space-x-4">
               <div className="hidden md:flex items-center text-2xl space-x-1">
-                <a
-                  href="#"
-                  className="hover:text-purple text-grey rounded transition duration-300 py-2 px-7">
-                  Home
-                </a>
-                <a
-                  href="#"
-                  className="hover:text-purple text-grey rounded transition duration-300 py-2 px-7">
+                <Link
+                  activeClass="active"
+                  to="home"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                  className="hover:text-purple cursor-pointer text-grey rounded transition duration-300 py-2 px-7">
+                  {" "}
+                  Home{" "}
+                </Link>
+                <Link
+                  activeClass="active"
+                  to="about"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                  className="hover:text-purple cursor-pointer text-grey rounded transition duration-300 py-2 px-7">
                   About Me
-                </a>
+                </Link>
               </div>
             </div>
             <div>
@@ -39,21 +79,32 @@ function NavBar() {
               </a>
             </div>
             <div className="hidden md:flex items-center space-x-1 text-2xl">
-              <a
-                href=""
-                className="py-2 px-7 hover:text-purple text-grey rounded transition duration-300">
+              <Link
+                activeClass="active"
+                to="projects"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                className="hover:text-purple cursor-pointer text-grey rounded transition duration-300 py-2 px-7">
+                {" "}
                 Projects
-              </a>
-              <a
-                href=""
-                className="py-2 px-7 hover:text-purple text-grey rounded transition duration-300">
+              </Link>
+              <Link
+                activeClass="active"
+                to="contact"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                className="hover:text-purple cursor-pointer text-grey rounded transition duration-300 py-2 px-7">
                 Contact
-              </a>
+              </Link>
             </div>
 
-            <div className="md:hidden flex items-center">
+            {/* <div className="md:hidden flex items-center">
               <button
-                onClick={() => setIsNavOpen((prev) => !prev)}
+                // onClick={() => setIsNavOpen((prev) => !prev)}
                 className="mobile-menu-button">
                 <svg
                   className="w-6 h-6"
@@ -69,14 +120,14 @@ function NavBar() {
                   />
                 </svg>
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
       </nav>
 
-      <section className="MOBILE-MENU flex md:hidden">
+      {/* <section className="MOBILE-MENU float-right text-al flex md:hidden">
         <div
-          className="HAMBURGER-ICON space-y-2"
+          className="HAMBURGER-ICON space-y-2 "
           onClick={() => setIsNavOpen((prev) => !prev)} // toggle isNavOpen state on click
         >
           <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
@@ -84,8 +135,8 @@ function NavBar() {
           <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
         </div>
         {isNavOpen && (
-          <div className="showMenuNav">
-            {/* <div
+          <div className="showMenuNav"> */}
+      {/* <div
               className="CROSS-ICON absolute top-0 right-0 px-8 py-8"
               onClick={() => setIsNavOpen(false)} // change isNavOpen state to false to close the menu
             >
@@ -101,24 +152,40 @@ function NavBar() {
                 <line x1="6" y1="6" x2="18" y2="18" />
               </svg>
             </div> */}
-            <a
-              href="#"
-              className="hover:text-purple text-grey rounded transition duration-300 block py-2 px-4 text-sm">
+      {/* <Link
+              activeClass="active"
+              to="Projects"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              className="hover:text-purple cursor-pointer text-grey rounded transition duration-300 block  text-sm">
               Projects
-            </a>
-            <a
-              href="#"
-              className="hover:text-purple text-grey rounded transition duration-300 block py-2 px-4 text-sm">
+            </Link>
+            <Link
+              activeClass="active"
+              to="about"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              className="hover:text-purple cursor-pointer text-grey rounded transition duration-300 block text-sm">
               About Me
-            </a>
-            <a
-              href="#"
-              className="hover:text-purple text-grey rounded transition duration-300 block py-2 px-4 text-sm">
+            </Link>
+            <Link
+              activeClass="active"
+              to="contact"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              className="hover:text-purple cursor-pointer text-grey rounded transition duration-300 block text-sm">
               Contact
-            </a>
+            </Link>
           </div>
         )}
       </section>
+ */}
     </>
   );
 }

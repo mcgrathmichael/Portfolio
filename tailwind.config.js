@@ -14,6 +14,8 @@ export default {
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "that-glow":
+          "box-shadow: inset 0px -6px 4px rgba(152, 255, 181, 0.62);",
       },
     },
   },

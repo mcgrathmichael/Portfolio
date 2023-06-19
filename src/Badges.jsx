@@ -5,16 +5,16 @@ import Innovative from "./assets/img/InnovativeBadge.svg";
 function Badges() {
   return (
     <>
-      <div className="flex flex-col items-center mt-20">
+      <div className=" flex flex-col items-center mt-20">
         <div className="relative">
           <img
             src={Dynamic}
             alt="Dynamic Badge"
             className="w-24 md:w-40 mx-auto mb-4"
           />
-          <span className="absolute p-4 left-1/2 transform -translate-x-1/2 -mt-8 text-green text-xl md:text-3xl  font-bold">
+          <h1 className="absolute p-4 left-1/2 transform -translate-x-1/2 -mt-8 text-green text-xl md:text-3xl  font-bold">
             Dynamic
-          </span>
+          </h1>
         </div>
 
         <div className="flex justify-center">
@@ -24,9 +24,9 @@ function Badges() {
               alt="Functional Badge"
               className="w-24 md:w-40 mx-8"
             />
-            <span className="absolute p-8 left-1/2 transform -translate-x-1/2 -mt-8 text-green text-xl md:text-3xl font-bold">
+            <h1 className="absolute p-8 left-1/2 transform -translate-x-1/2 -mt-8 text-green text-xl md:text-3xl font-bold">
               Functional
-            </span>
+            </h1>
           </div>
           <div className="-z-10 bg-gradient-to-t from-grey to-green  scale-150 absolute text-9xl blur-2xl  m-3 ">
             ⬢
@@ -37,9 +37,9 @@ function Badges() {
               alt="Innovative Badge"
               className=" w-24 md:w-40 mx-8"
             />
-            <span className="absolute p-8 left-1/2 transform -translate-x-1/2 -mt-8 text-green text-xl md:text-3xl font-bold">
+            <h1 className="absolute p-8 left-1/2 transform -translate-x-1/2 -mt-8 text-green text-xl md:text-3xl font-bold">
               Innovative
-            </span>
+            </h1>
           </div>
         </div>
         <div className=" w-16 h-48 blur-xl bg-gradient-radial from-green via-dark to-purple rounded-full rotate-90 -my-10 -z-10"></div>
