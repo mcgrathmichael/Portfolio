@@ -11,8 +11,10 @@ const ContactForm = () => {
     e.preventDefault();
 
     const templateParams = {
-      name: "James",
-      notes: "Check this out!",
+      from_name: name,
+      from_email: email,
+      reply_to: email,
+      message: message,
     };
 
     emailjs
@@ -43,9 +45,9 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="p-7 flex justify-center text-grey">
-      <div className="w-1/2">
-        <h1 className="text-grey underline text-2xl md:text-6xl p-20 flex justify-center">
+    <div className="md:p-7 flex justify-center text-grey">
+      <div className="md:w-1/2">
+        <h1 className="text-grey decoration-pink underline text-2xl md:text-6xl p-20 flex justify-center">
           CONTACT
         </h1>
         <form id="contact" ref={form} className="" onSubmit={sendEmail}>
@@ -57,7 +59,7 @@ const ContactForm = () => {
               name="user_name"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="w-full border border-gray-300 rounded focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+              className="w-full bg-purple border border-gray-300 rounded focus:outline-none focus:ring-blue-500 focus:border-blue-500"
               required
             />
           </div>
@@ -65,26 +67,28 @@ const ContactForm = () => {
             <input
               placeholder="Your Email"
               type="email"
-              name="user_email"
+              name="from_email"
               id="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full border border-gray-300 rounded focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+              className="w-full bg-purple border border-gray-300 rounded focus:outline-none focus:ring-blue-500 focus:border-blue-500"
               required
             />
           </div>
-          <div className="mb-4">
+          <div className="mb-4 flex">
             <textarea
               placeholder="Your Message"
               id="message"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
-              className="w-full h-32 border border-gray-300 rounded focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+              className="w-full bg-grey h-32 md:h-64 border border-gray-300 rounded focus:outline-none focus:ring-blue-500 focus:border-blue-500"
               required></textarea>
           </div>
-          <button className=" hover:ring-2 p-3 hover:ease-in-out hover:ring-green ring-offset-1 opacity-75 overflow-hidden px-8 rounded-2xl bg-gradient-to-t from-pink to-purple">
-            Send
-          </button>
+          <div className="flex  justify-center">
+            <button className="lg:w-1/2 text-dark hover:ring-2 p-3 hover:ease-in-out hover:ring-green ring-offset-1 opacity-75 overflow-hidden px-8 rounded-2xl bg-gradient-to-t from-pink to-purple">
+              Send
+            </button>
+          </div>
         </form>
       </div>
     </div>

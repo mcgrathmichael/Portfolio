@@ -5,6 +5,9 @@ import Innovative from "./assets/img/InnovativeBadge.svg";
 function Badges() {
   return (
     <>
+      <h1 className="text-grey opacity-70 decoration-green underline text-3xl flex justify-center">
+        What I like to see and strive for in Development
+      </h1>
       <div className=" flex flex-col items-center mt-20">
         <div className="relative">
           <img

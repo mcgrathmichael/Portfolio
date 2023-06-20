@@ -8,9 +8,16 @@ import mm3 from "./assets/img/mm3.png";
 function Projects() {
   return (
     <div id="project">
-      <h1 className="text-grey underline text-2xl md:text-6xl p-20 flex justify-center">
+      <h1 className="text-grey decoration-pink underline text-2xl md:text-6xl p-20 flex justify-center">
         PROJECTS
       </h1>
+      {/* <div className="absolute w-56 -z-10  h-56 blur-3xl bg-gradient-radial from-green via-dark  to-purple rounded-full translate-y-48 ml-96  "></div> */}
+
+      <div className="absolute w-16 -z-10 lg:w-36 lg:h-36 h-16 blur-2xl bg-gradient-radial from-pink via-purple  to-dark rounded-full -translate-y-48 -translate-x-48 "></div>
+      <div className="absolute w-56 -z-10  h-56 blur-xl bg-gradient-radial from-green via-dark  to-purple rounded-full float-right "></div>
+
+      <div className="absolute w-96 -z-10  h-96 blur-3xl bg-gradient-radial from-pink via-purple  to-grey rounded-full translate-y-48 "></div>
+
       <Carousel
         showThumbs={false}
         showStatus={false}
@@ -24,7 +31,7 @@ function Projects() {
               <img className="p-4 rounded-3xl" src={Quiz} alt="Quiz Image" />
             </div>
             <div className="sm:w-1/2">
-              <p className="text-grey text-lg sm:text-xl">
+              <p className="text-grey opacity-70 md:text-2xl lg:text-3xl sm:text-xl">
                 My first project in HTML, JavaScript, and CSS - I’m definitely
                 still proud of it. It was a Quiz game made with 3 others.
                 <br />
@@ -49,7 +56,7 @@ function Projects() {
               <img src={mm3} className="p-2 rounded-3xl" alt="MM3 Image" />
             </div>
             <div className="sm:w-1/2">
-              <p className="text-grey text-lg p-3">
+              <p className="text-grey opacity-70 md:text-2xl lg:text-3xl sm:text-xl p-3">
                 This was our second project - Memory Mash Up!
                 <br />
                 <br />
