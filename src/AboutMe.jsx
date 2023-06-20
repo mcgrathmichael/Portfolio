@@ -8,11 +8,9 @@ import { ImGithub } from "react-icons/im";
 function AboutMe() {
   return (
     <>
-      <div>
+      <div id="aboutme">
         <div className="flex">
-          <span
-            id="about"
-            className="text-grey opacity-70 w-3/5 p-4 md:text-2xl md:p-20 lg:text-3xl">
+          <span className="text-grey opacity-70 w-3/5 p-4 md:text-2xl md:p-20 lg:text-3xl">
             Hi, I’m Michael, a passionate web developer with experience in
             JavaScript, React, and CSS. I love building interactive and
             user-friendly web applications. I like a colourful palette, just

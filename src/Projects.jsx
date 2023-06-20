@@ -1,5 +1,4 @@
 import Quiz from "./assets/img/quiz.png";
-
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import mm1 from "./assets/img/mm1.png";
@@ -8,7 +7,7 @@ import mm3 from "./assets/img/mm3.png";
 
 function Projects() {
   return (
-    <div id="projects">
+    <div id="project">
       <h1 className="text-grey underline text-2xl md:text-6xl p-20 flex justify-center">
         PROJECTS
       </h1>

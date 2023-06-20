@@ -1,18 +1,51 @@
 import { slide as Menu } from "react-burger-menu";
+import { Link } from "react-scroll";
+
 import "./Burger.css";
 function Burger() {
   return (
     <div className="md:hidden">
       <Menu className="fixed inline-block bg-grey ">
-        <a id="home" className="menu-item" href="/">
+        <Link
+          activeClass="active"
+          to="home"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+          className="menu-item">
           Home
-        </a>
-        <a id="about" className="menu-item" href="/about">
-          About
-        </a>
-        <a id="contact" className="menu-item" href="/contact">
+        </Link>
+        <Link
+          activeClass="active"
+          to="aboutme"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+          className="menu-item">
+          About Me
+        </Link>
+        <Link
+          activeClass="active"
+          to="contact"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+          className="menu-item">
           Contact
-        </a>
+        </Link>
+        <Link
+          activeClass="active"
+          to="project"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+          className="menu-item">
+          Projects
+        </Link>
       </Menu>
     </div>
   );
