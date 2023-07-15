@@ -1,6 +1,5 @@
 import Logo from "./assets/img/logo.svg";
 import { Link } from "react-scroll";
-// import ScrollElement from "react-scroll/modules/mixins/scroll-element";
 
 function NavBar() {
   return (
@@ -17,7 +16,7 @@ function NavBar() {
                   smooth={true}
                   offset={-70}
                   duration={500}
-                  className="hover:text-purple cursor-pointer text-grey rounded transition duration-300 py-2 px-7">
+                  className="hover:text-purple cursor-pointer text-pink dark:text-grey rounded transition duration-300 py-2 px-7">
                   {" "}
                   Home{" "}
                 </Link>
@@ -28,18 +27,16 @@ function NavBar() {
                   smooth={true}
                   offset={-70}
                   duration={500}
-                  className="hover:text-purple cursor-pointer text-grey rounded transition duration-300 py-2 px-7">
+                  className="hover:text-purple cursor-pointer text-pink dark:text-grey rounded transition duration-300 py-2 px-7">
                   About Me
                 </Link>
               </div>
             </div>
-            <div>
-              <a href="#" className="flex  items-center py-5 px-7 text-grey">
-                <img
-                  src={Logo}
-                  className="animate-pulse transition-all-300  mr-1"></img>
-              </a>
-            </div>
+            {/* <div className="  via-sky/25 bg-gradient-radial  from-pink to-sky/40"> */}
+            <img
+              className="hue-rotate-180 brightness-90 dark:filter-none animate-pulse"
+              src={Logo}></img>
+            {/* </div> */}
             <div className="hidden md:flex items-center space-x-1 text-2xl">
               <Link
                 activeClass="active"
@@ -48,7 +45,7 @@ function NavBar() {
                 smooth={true}
                 offset={-70}
                 duration={500}
-                className="hover:text-purple cursor-pointer text-grey rounded transition duration-300 py-2 px-7">
+                className="hover:text-purple cursor-pointer text-pink dark:text-grey rounded transition duration-300 py-2 px-7">
                 {" "}
                 Projects
               </Link>
@@ -59,7 +56,7 @@ function NavBar() {
                 smooth={true}
                 offset={-70}
                 duration={500}
-                className="hover:text-purple cursor-pointer text-grey rounded transition duration-300 py-2 px-7">
+                className="hover:text-purple cursor-pointer text-pink dark:text-grey rounded transition duration-300 py-2 px-7">
                 Contact
               </Link>
             </div>

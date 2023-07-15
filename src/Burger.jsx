@@ -26,16 +26,7 @@ function Burger() {
           className="menu-item">
           About Me
         </Link>
-        <Link
-          activeClass="active"
-          to="contact"
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={500}
-          className="menu-item">
-          Contact
-        </Link>
+
         <Link
           activeClass="active"
           to="project"
@@ -45,6 +36,17 @@ function Burger() {
           duration={500}
           className="menu-item">
           Projects
+        </Link>
+
+        <Link
+          activeClass="active"
+          to="contact"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+          className="menu-item">
+          Contact
         </Link>
       </Menu>
     </div>

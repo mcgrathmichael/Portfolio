@@ -45,33 +45,35 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="md:p-7 flex justify-center text-grey">
+    <div className="md:p-7 flex justify-center text-gold dark:text-grey">
       <div className="md:w-1/2">
-        <h1 className="text-grey decoration-pink underline text-2xl md:text-6xl p-20 flex justify-center">
+        <h1 className="dark:text-grey text-pink decoration-gold dark:decoration-pink underline text-2xl md:text-6xl p-20 flex justify-center">
           CONTACT
         </h1>
         <form id="contact" ref={form} className="" onSubmit={sendEmail}>
           <div className="mb-4">
             <input
+              autoComplete="name"
               placeholder="Your Name"
               type="text"
               id="name"
               name="user_name"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="w-full bg-purple border border-gray-300 rounded focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+              className="w-full h-10 caret-pink bg-purple border border-gray-300 rounded focus:outline-none focus:ring-blue-500 focus:border-blue-500"
               required
             />
           </div>
           <div className="mb-4">
             <input
+              autoComplete="email"
               placeholder="Your Email"
               type="email"
               name="from_email"
               id="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full bg-purple border border-gray-300 rounded focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+              className="w-full h-10 caret-pink  bg-purple border border-gray-300 rounded focus:outline-none focus:ring-blue-500 focus:border-blue-500"
               required
             />
           </div>
@@ -81,11 +83,11 @@ const ContactForm = () => {
               id="message"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
-              className="w-full bg-grey h-32 md:h-64 border border-gray-300 rounded focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+              className="w-full dark:bg-grey caret-purple bg-pink h-44 md:h-64 border border-gray-300 rounded focus:outline-none focus:ring-blue-500 focus:border-blue-500"
               required></textarea>
           </div>
           <div className="flex  justify-center">
-            <button className="lg:w-1/2 text-dark hover:ring-2 p-3 hover:ease-in-out hover:ring-green ring-offset-1 opacity-75 overflow-hidden px-8 rounded-2xl bg-gradient-to-t from-pink to-purple">
+            <button className="md:tracking-widest  w-full leading-loose dark:text-dark hover:ring-2 p-3 hover:ease-in-out  hover:ring-green ring-offset-1 overflow-hidden px-8 rounded-2xl bg-gradient-to-t from-pink to-purple">
               Send
             </button>
           </div>
